@@ -1,1 +1,1 @@
-Matrices
+Prototypes for Linear Algebra functions
