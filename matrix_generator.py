@@ -1,8 +1,14 @@
 from random import randint
 
 print("--------MATRIX GENERATOR--------")
-num_cols = input("Enter # of cols: ")
-num_rows = input("Enter # of rows: ")
+num_rows = 0
+num_cols = 0
+
+def get_dimensions():
+    global num_cols
+    global num_rows
+    num_cols = input("Enter # of cols: ")
+    num_rows = input("Enter # of rows: ")
 
 def generate_matrix(num_rows, num_cols):
     # Create num_rows x num_cols matrix and fill it in with random number from 0-9
@@ -27,5 +33,6 @@ def print_matrix(matrix):
     # Print bottom boundary of matrix
     print("-" * int(num_cols)*4 + "-")
 
+get_dimensions()
 matrix = generate_matrix(num_rows, num_cols)
 print_matrix(matrix)
